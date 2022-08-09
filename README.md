@@ -28,7 +28,7 @@ Using the ROCCC approach learned during the course, I will address any limitatio
 - Original: The data comes from a third-party source via Amazon Mechanical Turk, meaning there is no direct relationship between the entity and respondents. 
 - Comprehensive: Dataset contains minute-level output for physical intensities, heart-rate, and sleep monitoring and also multiple attributes for most of the table
 - Current: The data is old and reflects trends from 2016. Since then, Bellabeat and Fitbit have both released new products with advanced technology that better track lifestyle data.
--Cited: 
+- Cited:  
 
 #### Additional limitations: 
 Some responsdants did not wear their Fitbit for the entirity of the 30-day period, which could account for the missing records. 
