@@ -33,8 +33,7 @@ Using the ROCCC approach learned during the course, I will address any limitatio
 **Additional limitations:** 
 Some responsdants did not wear their Fitbit for the entirity of the 30-day period, which could account for the missing records. 
 
-**Focus**
-For my analysis, I've decided to focus on daily/hourly usage of the Fitbit device. The three tables I selected from the dataset to analyze are dailyActivities_merged, sleepDay_merged, and hourlyIntensities_merged.
+For my analysis, I've decided to **focus** on daily/hourly usage of the Fitbit device. The three tables I selected from the dataset to analyze are dailyActivities_merged, sleepDay_merged, and hourlyIntensities_merged.
 
 ### Data Cleaning 
 For this case study, I used Microsoft Excel and BigQuery SQL to clean and transform the data. I began the clean process by checking for: blank spaces, duplicates, misleading records, and any inconsistencies.
