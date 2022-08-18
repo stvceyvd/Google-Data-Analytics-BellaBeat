@@ -12,11 +12,11 @@ Bellabeat is a small successful company that has the potential to become a large
 ### Business Task
 Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices, and apply these insights to a comparable Bellabeat product such as the Bellabeat Time.
 
-#### Primary Stakeholders: 
+**Primary Stakeholders:**
 Urška Sršen, Bellabeat's co-founder and Chief Creative Officer
 Sando Mur, Bellabeat's co-founder and a key member of the Bellabeat executive team. 
 
-#### Secondary Stakeholders: 
+**Secondary Stakeholders:**
 Bellabeat marketing analytics team: A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat's marketing strategy.
 
 ### About the Data 
