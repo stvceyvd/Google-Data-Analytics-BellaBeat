@@ -1,7 +1,7 @@
 # Google Data Analytics Certificate Case Study - How Can a Wellness Technology Company Play it Smart?
 
 ### Introduction
-For my Google Data Analytics Professional Certificate capstone project, I will be conducting a case study. Following the steps of data analysis taught by the course (ask, prepare, process, analyze, share, and act), I will be analyzing a dataset also provided by the course, as if I were a junior data analyst working on the marketing team at Bellabeat, a high-tech manufacturer of health-focused products for women.
+For my [Google Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-data-analytics?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite-gDigital-paidha-sem-bk-gen-exa-glp-br-null&_ga=2.244797261.950290879.1660862123-1096932820.1658185357&_gac=1.149812676.1658444207.Cj0KCQjw8uOWBhDXARIsAOxKJ2HwpFHSnMZDJDQv74Qkx3-MUYDeY6LNt4vm-XZ9zN0puUniH0tZM0kaAlafEALw_wcB) capstone project, I will be conducting a case study. Following the steps of data analysis taught by the course (ask, prepare, process, analyze, share, and act), I will be analyzing a dataset also provided by the course, as if I were a junior data analyst working on the marketing team at Bellabeat, a high-tech manufacturer of health-focused products for women.
 
 ### About Bellabeat 
 Based in San Francisco, Bellabeat is a wellness company that focuses on health-focused smart technology. Its mission is to empower women to reconnect within themselves and unlock their full potential, through biometrics and lifestyle data.
