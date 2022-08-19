@@ -26,4 +26,70 @@
 
 ### Uploaded all three tables onto Google Cloud's BigQuery SQL console to continue any further cleaning and begin the data analysis. 
                                            
+# Selecting distinct user IDs to find how many participants are in the survery
+SELECT DISTINCT Id
+FROM `cedar-amulet-326100.bellabeat.HourlyIntensities`
+# Returns 33 unique IDs
+                                           
+# Selecting distinct user IDs to find how many participants are in the survery                                          
+SELECT DISTINCT Id
+FROM `cedar-amulet-326100.bellabeat.dailyActivity`
+# Returns 33 unique IDs
+
+# Selecting distinct user IDs to find how many participants are in the survery   
+SELECT DISTINCT Id
+`cedar-amulet-326100.bellabeat.sleepDay`
+# Returns 24 unique IDs
+
+# Doubling-checking if there any duplicates in the table SleepDay
+SELECT *, COUNT(*) as number_of_rows
+FROM cedar-amulet-326100.bellabeat.sleepDay
+GROUP BY Id, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeinBed 
+HAVING number_of_rows >1  
+# Returns no duplicates 
+
+# Double-checking if there any duplicates in the table dailyActivity
+SELECT *, COUNT(*) as number_of_rows
+FROM `cedar-amulet-326100.bellabeat.dailyActivity` 
+GROUP BY Id, ActivityDate, TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDistance, VeryActiveDistance, ModeratelyActiveDistance, LightActiveDistance, SedentaryActiveDistance, VeryActiveMinutes, FairlyActiveMinutes, LightlyActiveMinutes, SedentaryMinutes, Calories
+HAVING number_of_rows > 1
+# Returns no duplicates 
+
+# Checking if there are any zero calories days 
+SELECT Id, COUNT(*) as zeroCals
+FROM  `cedar-amulet-326100.bellabeat.dailyActivity`
+WHERE Calories = 0
+group by Id, ActivityDate, Calories
+ORDER BY zeroCals desc
+## Returns no zero calorie days
+
+# Double-checking if there are any zero total steps days 
+SELECT Id, COUNT(*) as zeroSteps
+FROM  `cedar-amulet-326100.bellabeat.dailyActivity`
+WHERE TotalSteps = 0
+group by Id, ActivityDate, TotalSteps 
+## Returns no zero total step days 
+
+### Analyze Data 
+
+# Looking at average steps, average distance, and average calories per day of the week (filtering out zero-step day logs). 
+SELECT EXTRACT(dayofweek from ActivityDate) as DayofWeek, AVG(TotalSteps) as AverageSteps, AVG(TotalDistance) as AverageDistance, AVG(Calories) as AverageCalories
+FROM `cedar-amulet-326100.bellabeat.dailyActivity`
+WHERE TotalSteps > 0
+GROUP BY DayOfWeek
+ORDER BY AverageSteps DESC
+
+# Looking at average amount of hours asleep, average amount of hours in bed, and average amount of minutes to fall asleep per day of the week. 
+SELECT EXTRACT(dayofweek from SleepDay) as DayofWeek, AVG(TotalMinutesAsleep/60) AS AverageHoursAsleep, AVG(TotalTimeInBed/60) as AverageHoursInBed, AVG(TotalTimeInBed-TotalMinutesAsleep) as AverageTimetoFallAsleep
+FROM `cedar-amulet-326100.bellabeat.sleepDay`
+GROUP BY DayofWeek
+ORDER BY AverageHoursAsleep DESC
+
+# Looking at average amount of steps taken per hour of the day. 
+SELECT ActivityHour, AVG(StepTotal) as AverageStepTotal
+FROM `cedar-amulet-326100.bellabeat.HourlySteps`
+GROUP BY ActivityHour
+ORDER BY AverageStepTotal DESC 
+                           
+
                                            
