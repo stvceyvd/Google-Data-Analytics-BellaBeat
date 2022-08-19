@@ -2,7 +2,7 @@
 
 ### Data Cleaning with Excel
 
-### Across all three tables 
+### Across all four tables 
   # Checked for any blank cells
   # Checked for any duplicates, removed 3 rows from sleepDay table 
   # Find min/max date for all data. 
@@ -13,18 +13,21 @@
 ### dailyActivity_merged 
   # Filtered out rows with TotalSteps = 0 (Records show that participants with zero total steps also have 24 hours of sedentary activity, reflecting days that participants did not use their Fitbit, which can be misleading.
   
-  
 ### sleepDay_merged
   # Subtracted column "TotalMinutesAsleep" from "TotalTimeinBed" and created a new column, "TimeToFallAsleep."
   # Remove column "SleepRecords."
- 
+
+### hourlySteps_merged
+  # Changed "ActivityHour" into two separate columns, "ActivityDate" and "ActivityHour" using the text to columns function. 
+  # Reformatted data in "ActivityHour" to HH:MM XM from HH:MM:SS XM.
+  # Reformatted data in "ActivityDate" to MM/DD/YY (short date).                                        
  
 ### hourlyIntensities_merged 
   # Changed "ActivityHour" into two separate columns, "ActivityDate" and "ActivityHour" using the text to columns function. 
   # Reformatted data in "ActivityHour" to HH:MM XM from HH:MM:SS XM.
   # Reformatted data in "ActivityDate" to MM/DD/YY (short date). 
 
-### Uploaded all three tables onto Google Cloud's BigQuery SQL console to continue any further cleaning and begin the data analysis. 
+### Uploaded all four tables onto Google Cloud's BigQuery SQL console to continue any further cleaning and begin the data analysis. 
                                            
 # Selecting distinct user IDs to find how many participants are in the survery
 SELECT DISTINCT Id
@@ -78,18 +81,20 @@ FROM `cedar-amulet-326100.bellabeat.dailyActivity`
 WHERE TotalSteps > 0
 GROUP BY DayOfWeek
 ORDER BY AverageSteps DESC
+## Tuesday has the highest average step count and highest average distance.                                            
 
 # Looking at average amount of hours asleep, average amount of hours in bed, and average amount of minutes to fall asleep per day of the week. 
 SELECT EXTRACT(dayofweek from SleepDay) as DayofWeek, AVG(TotalMinutesAsleep/60) AS AverageHoursAsleep, AVG(TotalTimeInBed/60) as AverageHoursInBed, AVG(TotalTimeInBed-TotalMinutesAsleep) as AverageTimetoFallAsleep
 FROM `cedar-amulet-326100.bellabeat.sleepDay`
 GROUP BY DayofWeek
 ORDER BY AverageHoursAsleep DESC
+## Sunday has the highest average of sleep hours (7.5).                                          
 
 # Looking at average amount of steps taken per hour of the day. 
 SELECT ActivityHour, AVG(StepTotal) as AverageStepTotal
 FROM `cedar-amulet-326100.bellabeat.HourlySteps`
 GROUP BY ActivityHour
 ORDER BY AverageStepTotal DESC 
-                           
+## Highest average amount of steps taken is during 6-7 PM.                            
 
                                            
