@@ -24,4 +24,6 @@
   # Reformatted data in "ActivityHour" to HH:MM XM from HH:MM:SS XM.
   # Reformatted data in "ActivityDate" to MM/DD/YY (short date). 
 
-### Uploaded all three tables onto Google Cloud's BigQuery SQL console to continue any further cleaning and begin data analysis. 
+### Uploaded all three tables onto Google Cloud's BigQuery SQL console to continue any further cleaning and begin the data analysis. 
+                                           
+                                           
