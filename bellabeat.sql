@@ -97,4 +97,11 @@ GROUP BY ActivityHour
 ORDER BY AverageStepTotal DESC 
 ## Highest average amount of steps taken is during 6-7 PM.                            
 
+SELECT *
+FROM cedar-amulet-326100.bellabeat.dailyActivity as d
+LEFT JOIN  cedar-amulet-326100.bellabeat.sleepDay as s
+ON d.ActivityDate = s.sleepDay AND d.Id = s.Id
+ORDER BY d.Id
+                                           
+                                          
                                            
