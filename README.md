@@ -37,8 +37,36 @@ Some responsdants did not wear their Fitbit for the entirity of the 30-day perio
 
 For my analysis, I've decided to **focus** on daily/hourly usage of the Fitbit device. The three tables I selected from the dataset to analyze are dailyActivities_merged, sleepDay_merged, and hourlyIntensities_merged.
 
-### Data Cleaning 
-For this case study, I used Microsoft Excel and BigQuery SQL to clean and transform the data. I began the clean process by checking for: blank spaces, duplicates, misleading records, and any inconsistencies. Check out my SQL code [here](https://github.com/stvceyvd/Google-Data-Analytics-BellaBeat/blob/main/bellabeat.sql). 
+### Data Processing 
+For this case study, I used Microsoft Excel and BigQuery SQL to clean and transform the data. I began the clean process by checking for: blank spaces, duplicates, misleading records, and any inconsistencies. Check out my changelog and SQL code [here](https://github.com/stvceyvd/Google-Data-Analytics-BellaBeat/blob/main/bellabeat.sql).
+
+### Data Visualization
+
+
+<img width="1010" alt="Screen Shot 2022-08-23 at 10 44 04 PM" src="https://user-images.githubusercontent.com/109622742/186339847-a304b277-4d39-4a14-a565-bc821dfef041.png">
+
+
+<img width="1118" alt="Screen Shot 2022-08-23 at 10 48 33 PM" src="https://user-images.githubusercontent.com/109622742/186340334-9669a82c-31d2-456c-b59f-dc69a3eb61c6.png">
+
+
+<img width="950" alt="Screen Shot 2022-08-23 at 10 44 27 PM" src="https://user-images.githubusercontent.com/109622742/186339915-0bdefdce-c155-49bc-9d3c-0e67a9bd6a9c.png">
+
+
+<img width="1060" alt="Screen Shot 2022-08-23 at 10 47 09 PM" src="https://user-images.githubusercontent.com/109622742/186340196-21f5a16f-2889-4c6c-b313-97cc99487042.png">
+
+
+<img width="1122" alt="Screen Shot 2022-08-23 at 10 44 39 PM" src="https://user-images.githubusercontent.com/109622742/186339946-626bfdf9-473c-4637-83ea-2fcde6943a88.png">
+
+
+<img width="1004" alt="Screen Shot 2022-08-23 at 10 44 45 PM" src="https://user-images.githubusercontent.com/109622742/186339962-d4e9fafa-b391-4aff-93f3-78749d3217c1.png">
+
+
+<img width="1104" alt="Screen Shot 2022-08-23 at 10 44 50 PM" src="https://user-images.githubusercontent.com/109622742/186339967-399f6d5f-9519-4beb-a1b7-292049d81d54.png">
+
+
+<img width="1110" alt="Screen Shot 2022-08-23 at 10 45 07 PM" src="https://user-images.githubusercontent.com/109622742/186339991-4a0d427e-ca73-46eb-81ce-f031c07a702c.png">
+
+Check out/interact with my visualizations [here](https://public.tableau.com/app/profile/stacey.do/viz/Bellabeat_16605964059870/Story1)
 
 
 
