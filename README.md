@@ -66,7 +66,7 @@ For this case study, I used Microsoft Excel and BigQuery SQL to clean and transf
 
 <img width="1110" alt="Screen Shot 2022-08-23 at 10 45 07 PM" src="https://user-images.githubusercontent.com/109622742/186339991-4a0d427e-ca73-46eb-81ce-f031c07a702c.png">
 
-Check out/interact with my visualizations [here](https://public.tableau.com/app/profile/stacey.do/viz/Bellabeat_16605964059870/Story1)
+Check out/interact with my visualizations on my [Tableau Page](https://public.tableau.com/app/profile/stacey.do/viz/Bellabeat_16605964059870/Story1)!
 
 
 
