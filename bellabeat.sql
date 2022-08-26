@@ -164,6 +164,17 @@ WHERE ID not in (
 ## 9 participants from the dailyActivity table do not have logs in sleepDay or hourlyIntensities table, or both.
 ;
 
+# Finding the average percentage of time users spent performing very active level of activity.
+SELECT AVG(VeryActiveMinutes/(VeryActiveMinutes+FairlyActiveMinutes+ LightlyActiveMinutes+SedentaryMinutes)) * 100
+FROM `cedar-amulet-326100.bellabeat.dailyActivity`
+## On average, 1.99%, or 2% of the day is spent performing very active level of activity.
+; 
+
+# Finding the average percentage of time users spent in sendentary behavior. 
+SELECT AVG(SedentaryMinutes/(VeryActiveMinutes+FairlyActiveMinutes+ LightlyActiveMinutes+SedentaryMinutes)) * 100
+FROM `cedar-amulet-326100.bellabeat.dailyActivity`
+## on average, 78.2% of the day is spent in sedentary behavior. 
+; 
 
                                           
                                            
