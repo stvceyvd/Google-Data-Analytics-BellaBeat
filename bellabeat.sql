@@ -176,5 +176,11 @@ FROM `cedar-amulet-326100.bellabeat.dailyActivity`
 ## on average, 78.2% of the day is spent in sedentary behavior. 
 ; 
 
-                                          
-                                           
+# Looking at how many TotalSteps records is greater than or equal to the CDC's recommendation of 10,000 steps/day
+SELECT COUNT (TotalSteps)
+from `cedar-amulet-326100.bellabeat.dailyActivity`
+WHERE TotalSteps >= 10000                                          
+## Returns 303 rows, or about 35% 
+
+
+
