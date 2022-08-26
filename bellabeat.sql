@@ -137,7 +137,7 @@ FULL JOIN cedar-amulet-326100.bellabeat.HourlySteps as h
 ON s.Id = h.Id                                          
 ;
                                            
-# Looking at the unique Id from DailyActivity tables 
+# Looking at unique IDs from the dailyActivity table that do not have logs in either sleepDay or hourlyIntensities table, or both. 
 SELECT DISTINCT Id
 FROM `cedar-amulet-326100.bellabeat.dailyActivity`
 WHERE ID not in (
@@ -150,5 +150,20 @@ WHERE ID not in (
 )
 ;
 
-                                           
+# Looking at how many unique IDs from the dailyActivity table that do not have logs in either sleepDay or hourlyIntensities table, or both.
+SELECT COUNT (DISTINCT Id)
+FROM `cedar-amulet-326100.bellabeat.dailyActivity`
+WHERE ID not in (
+  SELECT d.Id 
+  FROM `cedar-amulet-326100.bellabeat.dailyActivity` as d
+  JOIN  `cedar-amulet-326100.bellabeat.sleepDay` as s 
+  ON d.Id = s.Id 
+  JOIN `cedar-amulet-326100.bellabeat.hourlyIntensities` as h
+  On s.Id = h.Id
+)
+## 9 participants from the dailyActivity table do not have logs in sleepDay or hourlyIntensities table, or both.
+;
+
+
+                                          
                                            
